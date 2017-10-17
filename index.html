@@ -20,6 +20,36 @@
     <script>
         let state = "macaron";
         let myImage = document.querySelector("img");
+
+        let imageNumber= 1;
+        setInterval(swap4images, 1000);
+        function swap4images(){
+            imageNumber++;
+            myImage.setAttribute("src", "img/"++".svg")
+            if(imageNumber==4){
+                imageNumber=0;
+            }
+        }
+
+
+        /*
+        let state = "macaron";
+        let myImage = document.querySelector("img");
+
+        setInterval(swapImage, 2000);
+
+        function swapImage(){
+            if (state == "macaron"){
+              myImage.setAttribute("src", "images/milk.svg")
+                state="milk"
+            }else {
+               myImage.setAttribute("src", "images/macaron.svg")
+                state="macaron"
+            }
+        }*/
+
+        /*
+        small annonymous function
         myImage.addEventListener("click", function(){
 
             if (state == "macaron"){
@@ -29,7 +59,7 @@
                myImage.setAttribute("src", "images/macaron.svg")
                 state="macaron"
             }
-        })
+        })*/
 
     </script>
 </body>
