@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        img{
+            display: block;
+            max-height: 50vh;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <img src="images/macaron.svg" alt="macaron">
+
+    <script>
+        let state = "macaron";
+        let myImage = document.querySelector("img");
+        myImage.addEventListener("click", function(){
+
+            if (state == "macaron"){
+              myImage.setAttribute("src", "images/milk.svg")
+                state="milk"
+            }else {
+               myImage.setAttribute("src", "images/macaron.svg")
+                state="macaron"
+            }
+        })
+
+    </script>
+</body>
+</html>
